@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+
+
+{% block page_content %}
+
+{% if current_user.is_anonymous %}
+<h2>Login to continue...</h2>
+{% else %}
+<h2> Make your To Do  like this !!!</h2>
+{% endif %}
+
+
+    <hr style="width:80%">
+
+    <img src="{{ url_for('static',filename='images/screen2.png') }}" alt="" style="width:80%">
+
+{% endblock %}

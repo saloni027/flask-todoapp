@@ -1,0 +1,48 @@
+hr{
+  margin-right: 50%;
+}
+
+a:hover{
+  color: orange !important;
+}
+.btns:hover{
+  color:orange;
+}
+.rem{
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.new{
+
+  width:200px;
+  padding: 10px;
+
+
+}
+ul{
+  list-style: none;
+  line-height: 1em;
+
+  font-size: 18px;
+
+}
+.text{
+
+  list-style-type: none;
+}
+
+h3{
+  color: orange;
+  font-family: 'Gamja Flower', cursive;
+  font-size: 27px;
+
+}
+h2{
+  color:grey;
+  font-family: 'Gamja Flower', cursive;
+
+}
+.brand{
+  font-family: 'Gamja Flower', cursive;font-size:23px;
+}

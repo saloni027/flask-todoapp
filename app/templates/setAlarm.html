@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+$(function() {
+  $( ".dtpick" ).datepicker({minDate: 0});
+});
+</script>
+
+{% endblock %}
+
+{% block page_content %}
+
+<hr>
+
+<form class="" action="" method="post">
+
+{{ form.hidden_tag() }}
+
+<p>
+    {{ form.alarm_time(class = 'dtpick') }}
+    {{ form.submit() }}
+
+
+    {% for error in form.alarm_time.errors %}
+    <span style="color: red;">[{{ error }}]</span>
+    {% endfor %}
+</p>
+</form>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block page_content %}
+
+<h2> Create your To do </h2>
+
+<hr>
+
+<form class="" action="" method="post">
+  {{ form.hidden_tag() }}
+  <p>
+    {{ form.task_name(size=32) }}
+    <span class="glyphicon glyphicon-plus" aria-hidden="True"></span>&nbsp;
+    {{ form.submit(class='btn btn-primary') }}
+  </p>
+</form>
+
+{% for t in task %}
+    <table>
+      <tr>
+        <td width="81%">
+          <h3>
+            <li>
+              {% if t.is_completed %}
+                    <strike style="color:pink;"> {% endif %} {{ t.task_name }} {% if t.is_completed %} </strike>
+              {% endif %}
+            </li>
+          </h3>
+          <span style="color:grey"> {{ moment(t.timestamp).fromNow() }} </span>
+          <a href="{{ url_for('setAlarm',id= t.id) }}" ><span class="glyphicon glyphicon-time"></span> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span style="color:grey;">
+            {% if t.alarm_time %}
+                Alarm at {{ moment(t.alarm_time.date()).calendar()}}
+            {% endif %}
+          </span>
+
+        </td>
+
+        <td>
+          <form class="" action=" /edit/{{ t.id }} ">
+            <button  name="button" class="btn btn-default btn-sm btns edit">
+              <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+          </form>
+        </td>
+
+        <td>
+          <form class="" action="/done/{{ t.id }}">
+            <button  name="button" class="btn btn-default btn-sm btns rem">
+              <span class="glyphicon glyphicon-remove"></span>
+            </button>
+          </form>
+        </td>
+
+        <td>
+          <form class="" action="/delete/{{ t.id }}" method="post">
+            <button type="submit" name="button" class="btn btn-default btn-sm btns del">
+              <span class="glyphicon glyphicon-trash"></span>
+            </button>
+          </form>
+        </td>
+
+    </tr>
+      </table>
+
+{% endfor %}
+<hr>
+{% endblock %}
