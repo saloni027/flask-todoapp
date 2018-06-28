@@ -9,7 +9,7 @@ from flask_moment import Moment
 from flask_script import Manager
 
 
-
+import logging
 
 app = Flask(__name__)
 app.config.from_object(Config)
