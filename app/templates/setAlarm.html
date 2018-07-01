@@ -23,11 +23,20 @@ $(function() {
     {{ form.submit() }}
 
 
+
     {% for error in form.alarm_time.errors %}
     <span style="color: red;">[{{ error }}]</span>
     {% endfor %}
+
 </p>
 </form>
+<form class="" action="{{ url_for('addTask') }}" method="post">
+
+  <button type="submit" name="button" class="btn btn-default" >  Back  </button>
+
+</form>
+
+
 
 
 

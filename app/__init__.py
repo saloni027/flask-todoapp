@@ -9,7 +9,8 @@ from flask_moment import Moment
 from flask_script import Manager
 
 
-import logging
+import logging,os
+from logging.handlers import SMTPHandler, RotatingFileHandler
 
 app = Flask(__name__)
 app.config.from_object(Config)
