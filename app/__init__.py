@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,request
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -7,6 +7,8 @@ from flask_login import LoginManager
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from flask_script import Manager
+
+
 
 
 import logging,os
@@ -19,9 +21,15 @@ migrate = Migrate(app, db)
 login = LoginManager(app)
 login.session_protection = "strong"
 login.login_view = 'login'
+login.login_message = 'Please log in to access this page.'
+
 bootstrap = Bootstrap(app)
 moment = Moment(app)
 manager = Manager(app)
+
+
+
+
 
 if not app.debug and not app.testing:
         # ...

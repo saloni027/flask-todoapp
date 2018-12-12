@@ -1,2 +1,114 @@
-2018-06-30 13:11:52,144 INFO: ToDoApp startup [in /Users/saloni/Documents/Flask/ToDoApp/app/__init__.py:45]
-2018-06-30 13:13:10,593 INFO: ToDoApp startup [in /Users/saloni/Documents/Flask/ToDoApp/app/__init__.py:45]
+2018-07-10 21:25:51,340 ERROR: Exception on /login [GET] [in /Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/saloni/Documents/Flask/ToDoApp/app/routes.py", line 45, in login
+    return render_template('login.html',form=form)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/saloni/Documents/Flask/ToDoApp/app/templates/login.html", line 2, in top-level template code
+    {% import "bootstrap/wtf.html" as wtf %}
+  File "/Users/saloni/Documents/Flask/ToDoApp/app/templates/base.html", line 1, in top-level template code
+    {% extends "bootstrap/base.html" %}
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
+    {% block navbar %}
+  File "/Users/saloni/Documents/Flask/ToDoApp/app/templates/base.html", line 24, in block "navbar"
+    <a class="navbar-brand brand" href=" {{ url_for('index') }} "><span style="color:orange;" class="glyphicon glyphicon-pencil"</span> {{ _('My-To-Do-App')}} </a>
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/jinja2/ext.py", line 134, in _gettext_alias
+    return __context.call(__context.resolve('gettext'), *args, **kwargs)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/jinja2/ext.py", line 140, in gettext
+    rv = __context.call(func, __string)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask_babel/__init__.py", line 116, in <lambda>
+    lambda x: get_translations().ugettext(x),
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask_babel/__init__.py", line 227, in get_translations
+    [get_locale()],
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask_babel/__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "/Users/saloni/Documents/Flask/ToDoApp/app/__init__.py", line 35, in get_locale
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
+NameError: name 'request' is not defined
+2018-07-10 21:25:53,911 ERROR: Exception on /login [GET] [in /Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/saloni/Documents/Flask/ToDoApp/app/routes.py", line 45, in login
+    return render_template('login.html',form=form)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/saloni/Documents/Flask/ToDoApp/app/templates/login.html", line 2, in top-level template code
+    {% import "bootstrap/wtf.html" as wtf %}
+  File "/Users/saloni/Documents/Flask/ToDoApp/app/templates/base.html", line 1, in top-level template code
+    {% extends "bootstrap/base.html" %}
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
+    {% block navbar %}
+  File "/Users/saloni/Documents/Flask/ToDoApp/app/templates/base.html", line 24, in block "navbar"
+    <a class="navbar-brand brand" href=" {{ url_for('index') }} "><span style="color:orange;" class="glyphicon glyphicon-pencil"</span> {{ _('My-To-Do-App')}} </a>
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/jinja2/ext.py", line 134, in _gettext_alias
+    return __context.call(__context.resolve('gettext'), *args, **kwargs)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/jinja2/ext.py", line 140, in gettext
+    rv = __context.call(func, __string)
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask_babel/__init__.py", line 116, in <lambda>
+    lambda x: get_translations().ugettext(x),
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask_babel/__init__.py", line 227, in get_translations
+    [get_locale()],
+  File "/Users/saloni/Documents/Flask/ToDoApp/env/lib/python3.6/site-packages/flask_babel/__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "/Users/saloni/Documents/Flask/ToDoApp/app/__init__.py", line 35, in get_locale
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
+NameError: name 'request' is not defined
+2018-07-10 21:26:16,220 INFO: ToDoApp startup [in /Users/saloni/Documents/Flask/ToDoApp/app/__init__.py:58]
+2018-12-13 00:24:55,227 INFO: ToDoApp startup [in /Users/saloni/Documents/Flask/ToDoApp/app/__init__.py:53]
+2018-12-13 00:25:09,707 INFO: ToDoApp startup [in /Users/saloni/Documents/Flask/ToDoApp/app/__init__.py:53]
+2018-12-13 00:52:51,693 INFO: ToDoApp startup [in /Users/saloni/Documents/Flask/ToDoApp/app/__init__.py:53]
